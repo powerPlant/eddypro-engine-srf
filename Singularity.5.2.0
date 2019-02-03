@@ -17,8 +17,8 @@ Version 5.2.0
   wget -q https://github.com/LI-COR/eddypro-engine/archive/v5.2.0.tar.gz
   tar -xzf v5.2.0.tar.gz
   cd /eddypro-engine-5.2.0/prj
-  make rp
-  make fcc
+  make Makefile_rp
+  make Makefile_fcc
 
   ## Cleanup
   rm -rf /eddypro-engine-5.2.0/prj /eddypro-engine-5.2.0/src /v5.2.0.tar.gz

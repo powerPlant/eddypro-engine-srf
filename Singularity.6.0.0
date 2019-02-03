@@ -17,8 +17,8 @@ Version 6.0.0
   wget -q https://github.com/LI-COR/eddypro-engine/archive/v6.0.0.tar.gz
   tar -xzf v6.0.0.tar.gz
   cd /eddypro-engine-6.0.0/prj
-  make rp
-  make fcc
+  make -f Makefile_rp_linux eddypro_rp
+  make -f Makefile_fcc_linux eddypro_fcc
 
   ## Cleanup
   rm -rf /eddypro-engine-6.0.0/prj /eddypro-engine-6.0.0/src /v6.0.0.tar.gz
