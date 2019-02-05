@@ -26,9 +26,9 @@ Version 6.2.1
   apt-get -y clean all
 
 %runscript
-if [[ $# -eq 0 ]]; then
-  echo -e "This Singularity image cannot provide a single entrypoint. Please use `<image-name.simg> <CMD>` or `singularity exec <image-name.simg> <CMD>`, where <CMD> is one of the  following:\n"
-  ls /eddypro-engine-6.2.1/bin/linux
+if [ $# -eq 0 ]; then
+  /bin/echo -e 'This Singularity image cannot provide a single entrypoint. Please use `<image-name.simg> <CMD>` or `singularity exec <image-name.simg> <CMD>`, where <CMD> is one of the  following:\n'
+  exec ls -l /eddypro-engine-6.2.1/bin/linux | awk '{print $NF}'
 else
-  "$@"
+  exec "$@"
 fi
