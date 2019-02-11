@@ -27,8 +27,8 @@ Version 6.1.0
 
 %runscript
 if [ $# -eq 0 ]; then
-  /bin/echo -e 'This Singularity image cannot provide a single entrypoint. Please use `<image-name.simg> <CMD>` or `singularity exec <image-name.simg> <CMD>`, where <CMD> is one of the  following:\n'
-  exec ls -l /eddypro-engine-6.1.0/bin/linux | awk '{print $NF}'
+  /bin/echo -e 'This Singularity image cannot provide a single entrypoint. Please use `<image-name.simg> <CMD>` or `singularity exec <image-name.simg> <CMD>`, where <CMD> is one of the following:\n'
+  exec ls /eddypro-engine-6.1.0/bin/linux
 else
   exec "$@"
 fi
